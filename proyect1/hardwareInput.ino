@@ -5,6 +5,94 @@ void hardwareInput(){
   Serial_lecture();
 }
 
+////////////////////
+// Serial lecture //
+////////////////////
+
+/*
+Usually for jobs with serial slaves, we have a known format, a payload, with constant headers and a tail, to close the message. 
+So the  machine state for lecture of the serial port has to filter the message by the header-body-tail components or the lecture it is going to be all trash
+
+*/
+
+void serial_lecture(){
+
+ if (Serial1.available()){                                 // Serial1 AVAILABLE
+    controlChar = Serial1.read();                          // READ ONE CHAR 
+    Serial.print(controlChar);                             // Print CHAR 
+  }
+  switch (State_serial_lecture){
+
+
+    //////////////////////////////////////
+    // E0 : FILTER BY FIRST CHAR HEADER //
+    //////////////////////////////////////
+    case 0:
+    break;
+
+    
+
+    ////////////////////////////////////////
+    // E1 : FILTER BY SECOND CHAR HEADER //
+    ///////////////////////////////////////
+    
+    case 1:
+    break;
+
+
+    ////////////////////////////////////////
+    // E2 : FILTER BY THIRD CHAR HEADER //
+    ///////////////////////////////////////
+    
+    case 2:
+    break;
+
+
+    /////////////////////////////////////////////////////////////////////////
+    // E3 : RECOPILATION OF BODY MSSG - READ UNTIL FIRST TAIL SPECIAL CHAR //
+    /////////////////////////////////////////////////////////////////////////
+    
+    case 3:
+    break;
+
+    ///////////////////////////////////////////////
+    // E4 : RECOPILATION OF FIRST CHAR OF TAIL  //
+    //////////////////////////////////////////////
+    
+    case 4:
+    break;
+    
+
+    ///////////////////////////////////////////////
+    // E5 : RECOPILATION OF SECOND CHAR OF TAIL  //
+    //////////////////////////////////////////////
+    
+    case 5:
+    break;
+
+    
+    ///////////////////////////////////////////////
+    // E6 : RECOPILATION OF THIRD CHAR OF TAIL  //
+    //////////////////////////////////////////////
+    
+    case 6:
+    break;
+
+    ////////////////////////////////////////
+    // E7 : END OF MSSG - GO BACK TO E0   //
+    ///////////////////////////////////////
+    
+    case 7:
+    break;
+    
+    
+    
+
+    
+  }
+}
+
+
 
 
 /////////////////////////////////////////
@@ -110,15 +198,3 @@ void boton_1{
 
 
 
-////////////////////
-// Serial lecture //
-////////////////////
-
-void serial_lecture(){
-
-
-
-
-
-  
-}
