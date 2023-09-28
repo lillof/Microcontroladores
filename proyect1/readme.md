@@ -1,4 +1,6 @@
 # Proyect1
+_THIS PROYECT IS UNDER CONSTRUCTION!!_
+
 
 _Generalization of a proyect that i will develop_
 
@@ -10,4 +12,4 @@ I am going to have this generics functions
   - 1 led
   - 1 analog sensor of a random variable
 
-*Disclaimer: nothing is specific for reason of the streets*
+*Disclaimer: nothing is specific so you can have general ideas*
