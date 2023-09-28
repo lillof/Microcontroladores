@@ -1,5 +1,5 @@
 
-void hardwarewIn(){
+void hardwareInput(){
   boton_0();
   boton_1();
   Serial_lecture();
