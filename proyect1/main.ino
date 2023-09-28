@@ -57,7 +57,7 @@ pinMode(medicion_0,	INPUT);		// PIN DE LECTURA
 void loop(){
   startTime = millis();               // INICIO DE SUPERLOOP
 	
-  hardwarewIn();                      // ENTRADA DE SEÑALES
+  hardwareInput();                      // ENTRADA DE SEÑALES
   linkIn();                           // CAPA DE ENLACE PARA DATOS DE ENTRADA
   App();                              // CAPA DE APLICACION
   linkOut();                          // CAPA DE ENLACE PARA DATOS DE SALIDA
