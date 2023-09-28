@@ -28,10 +28,10 @@ void setup(){
   interrupts();                     // habilitamos las interrupciones
   
   ////////////
-	// SERIAL //
-	////////////
+  // SERIAL //
+  ////////////
 	
-	Serial.begin(9600);                 // INICIAMOS SERIAL 1
+  Serial.begin(9600);                 // INICIAMOS SERIAL 1
 }
 void loop(){
 	startTime = millis();  						  // INICIO DE SUPERLOOP
